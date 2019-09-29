@@ -14,7 +14,7 @@ export interface RdsArgs {
     instanceClass: Input<string>;
     storageType: Input<string>;
     securityGroupIds: Input<string>[];
-    initalDbName?: Input<string>;
+    initalDbName: Input<string>;
 
     /**
      * Defaults to `false`.
@@ -127,7 +127,7 @@ export class RdsInstance extends ComponentResource {
             parameterGroupName: args.parameterGroupName || "",
             password: args.password,
             username: args.username,
-            name: args.initalDbName,
+            name: args.initalDbName
             storageType: args.storageType,
             finalSnapshotIdentifier: args.finalSnapshotIdentifier || "",
             skipFinalSnapshot: args.skipFinalSnapshot || false,

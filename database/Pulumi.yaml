@@ -11,7 +11,7 @@ template:
     dbPassword:
       description: (Required) The password to use for the database- stored as a secret
     dbName:
-      description: (Optional) The name of the database to create when the DB instance is created
+      description: (Required) The name of the database to create when the DB instance is created
     networkingStack:
       description: "(Required) The reference to the networking stack on which the database will be deployed
         (in the form <organization_or_user>/<projectName>/<stackName> e.g. myUsername/multicloud/dev)"
