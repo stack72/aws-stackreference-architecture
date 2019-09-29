@@ -151,8 +151,8 @@ You can then take the output `albAddress` and hit it with `curl` or in the brows
 
 ## Clean Up
 
-To clean up all of the stacks you can run the `destroyLayers.sh` script
+To clean up all of the stacks you can run the `destroyLayers.sh` script:
 
-    ```bash
-    ./destroyLayers.sh
-    ```
+```bash
+./destroyLayers.sh
+```
