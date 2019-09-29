@@ -30,13 +30,13 @@ between the system:
     npm install
     ```
 
-1.  Create a new Pulumi [stack][stack] named `dev`.
+1.  Create a new Pulumi stack named `dev`.
 
     ```bash
     pulumi stack init dev
     ```
 
-1. Set the Pulumi [configuration][pulumi-config] variables for the project.
+1. Set the Pulumi configuration variables for the project.
 
     ```bash
     pulumi config set aws:region us-west-2
@@ -68,13 +68,13 @@ between the system:
     npm install
     ```
 
-1.  Create a new Pulumi [stack][stack] named `dev`.
+1.  Create a new Pulumi stack named `dev`.
 
     ```bash
     pulumi stack init dev
     ```
 
-1. Set the Pulumi [configuration][pulumi-config] variables for the project:
+1. Set the Pulumi configuration variables for the project:
 
    ```bash
    pulumi config set aws:region us-west-2
@@ -115,13 +115,13 @@ between the system:
     npm install
     ```
 
-1.  Create a new Pulumi [stack][stack] named `dev`.
+1.  Create a new Pulumi stack named `dev`.
 
     ```bash
     pulumi stack init dev
     ```
 
-1. Set the Pulumi [configuration][pulumi-config] variables for the project:
+1. Set the Pulumi configuration variables for the project:
 
    ```bash
    pulumi config set aws:region us-west-2
@@ -151,8 +151,21 @@ You can then take the output `albAddress` and hit it with `curl` or in the brows
 
 ## Clean Up
 
-To clean up all of the stacks you can run the `destroyLayers.sh` script:
+In each of the directories, run the following command to tear down the resources that are part of our
+stack.
 
-```bash
-./destroyLayers.sh
-```
+1. Run `pulumi destroy` to tear down all resources.  You'll be prompted to make
+   sure you really want to delete these resources.
+
+   ```bash
+   pulumi destroy
+   ```
+
+1. To delete the stack, run the following command.
+
+   ```bash
+   pulumi stack rm
+   ```
+   > **Note:** This command deletes all deployment history from the Pulumi
+   > Console and cannot be undone.
+
